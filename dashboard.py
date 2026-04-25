@@ -204,15 +204,11 @@ def render():
         )
         fig_sc.update_traces(marker=dict(size=8, line=dict(color="#060a0f", width=1)))
         fig_sc.update_layout(
-            title="Charge max vs Résistance (par âge)",
+            title="Charge max vs Resistance (par age)",
             **PLOTLY_LAYOUT,
             height=360,
-            coloraxis_colorbar=dict(
-                title="Âge (j)",
-                tickfont=dict(color="#4a6a4a"),
-                titlefont=dict(color="#4a6a4a"),
-            )
         )
+        fig_sc.update_coloraxes(colorbar_tickfont_color="#4a6a4a")
         st.plotly_chart(fig_sc, use_container_width=True)
 
     # ═══════════════════════════════════════════════════════════════════════════
